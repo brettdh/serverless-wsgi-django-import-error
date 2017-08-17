@@ -1,6 +1,6 @@
 # Serverless WSGI app import error demonstration
 
-Demonstrating logandk/serverless-wsgi#24
+Demonstrating https://github.com/logandk/serverless-wsgi/issues/24
 
 ## Prerequisites
 
