@@ -1,0 +1,43 @@
+# Welcome to Serverless!
+#
+# This file is the main config file for your service.
+# It's very minimal at this point and uses default values.
+# You can always add more config options for more control.
+# We've included some commented out config examples here.
+# Just uncomment any of them to get that config option.
+#
+# For full config options, check the docs:
+#    docs.serverless.com
+#
+# Happy Coding!
+
+service: serverless-wsgi-django-import-error
+
+provider:
+  name: aws
+  runtime: python3.6
+
+plugins:
+  - serverless-python-requirements
+  - serverless-wsgi
+
+functions:
+  hello:
+    handler: wsgi.handler
+    events:
+      - http: GET ping
+
+custom:
+  pythonRequirements:
+    dockerizePip: true
+
+  wsgi:
+    # point it at Django's WSGI handler
+    app: api/api.wsgi.application
+
+    # we want to pack requirements for things other than
+    # the wsgi app, so it seems weird for the wsgi plugin
+    # to be responsible for packaging the deps.
+    # Instead, we rely on the pythonRequirements plugin
+    # which is only responsible for that packaging.
+    packRequirements: false
