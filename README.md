@@ -13,7 +13,7 @@ Tested with these; other versions may also demonstrate the issue.
 ## Setup
 ```sh
 $ npm install -g serverless
-$ git clone <url>
+$ git clone https://github.com/brettdh/serverless-wsgi-django-import-error.git
 $ cd serverless-wsgi-django-import-error
 $ npm install
 $ pipenv install
