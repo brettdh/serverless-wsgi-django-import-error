@@ -1,4 +1,2 @@
-djangorestframework==3.6.3
-pytz==2017.2
-werkzeug==0.12.2
-django==1.11.4
+-r requirements-pipenv.txt
+-e ./api

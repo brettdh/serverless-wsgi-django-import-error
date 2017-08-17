@@ -33,7 +33,7 @@ custom:
 
   wsgi:
     # point it at Django's WSGI handler
-    app: api/api.wsgi.application
+    app: api.wsgi.application
 
     # we want to pack requirements for things other than
     # the wsgi app, so it seems weird for the wsgi plugin
