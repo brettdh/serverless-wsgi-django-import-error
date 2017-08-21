@@ -30,9 +30,7 @@ $ ./manage.py runserver
 $ cd ..
 $ sls wsgi serve
 Traceback (most recent call last):
-  File "/Users/brhiggins/src/serverless-wsgi-django-import-error/node_modules/serverless-wsgi/serve.py", line 41, in <module>
-    serve(*sys.argv[1:])
-  File "/Users/brhiggins/src/serverless-wsgi-django-import-error/node_modules/serverless-wsgi/serve.py", line 22, in serve
+  File "/Users/brhiggins/src/serverless-wsgi-django-import-error/node_modules/serverless-wsgi/serve.py", line 26, in serve
     wsgi_module = importlib.import_module(wsgi_fqn[0].replace('/', '.'))
   File "/Users/brhiggins/.local/share/virtualenvs/serverless-wsgi-django-import-error-N1ZX-7Yy/lib/python3.6/importlib/__init__.py", line 126, in import_module
     return _bootstrap._gcd_import(name[level:], package, level)
@@ -60,4 +58,18 @@ Traceback (most recent call last):
   File "<frozen importlib._bootstrap>", line 961, in _find_and_load
   File "<frozen importlib._bootstrap>", line 948, in _find_and_load_unlocked
 ModuleNotFoundError: No module named 'api.settings'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/brhiggins/src/serverless-wsgi-django-import-error/node_modules/serverless-wsgi/serve.py", line 53, in <module>
+    serve(*sys.argv[1:])
+  File "/Users/brhiggins/src/serverless-wsgi-django-import-error/node_modules/serverless-wsgi/serve.py", line 34, in serve
+    wsgi_module = importlib.import_module(wsgi_fqn_parts[-1])
+  File "/Users/brhiggins/.local/share/virtualenvs/serverless-wsgi-django-import-error-N1ZX-7Yy/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 978, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 961, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 948, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'api.wsgi'
 ```
